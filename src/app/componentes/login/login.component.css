@@ -40,6 +40,10 @@ p{
       
 }
 
+form{
+    text-align: center ;
+}
+
 .email, .senha{
     display: block;
     border-radius: 15%;
@@ -54,7 +58,8 @@ p{
 }
 
 .btnComecar{
-   
+    
+    
     border-radius: 10px;
     font-family: 'chiller';
     font-weight: 700;
