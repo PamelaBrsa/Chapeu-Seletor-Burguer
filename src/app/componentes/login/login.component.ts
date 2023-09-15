@@ -14,32 +14,6 @@ export class LoginComponent {
 
   constructor(private authService: LoginService, private router: Router) { }
 
-  //   async logar (){
-  //     try {
-  //       this.loginError = false;
-  //       const usuarioLogado = await this.authService.login(this.nome, this.senha);
-  //       console.log(usuarioLogado)
-  //       if(usuarioLogado){
-  //         const usuario = localStorage.getItem('usuario');
-  //         switch(usuario){
-  //           case 'admin':
-  //             this.router.navigate(['/menu'])
-  //             break;
-
-  //         }
-  //       } else {
-  //         this.loginError = true;
-  //         throw new Error ('Login Inválido');
-  //       }
-  //     } catch (error) {
-  //       console.error ('Error no login:', error);
-  //       this.loginError = true;
-  //     }
-  //   }
-  // }
-
-
-
   logar(): void {
     this.authService.login(this.nome, this.senha).subscribe(
       (response) => {
@@ -51,7 +25,7 @@ export class LoginComponent {
         console.log(role)
         this.authService.saveToken(token)
 
-        this.router.navigate(['/home'])
+        this.router.navigate(['/menu'])
 
       }
     )

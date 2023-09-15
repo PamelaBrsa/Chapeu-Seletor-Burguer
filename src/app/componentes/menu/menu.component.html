@@ -1,0 +1,23 @@
+
+
+<div class='containerMenu'>
+  <img  src="../../../assets/salacomunal.jpg" alt="imagemMenu" class="menu">
+</div>
+<div class="type-options">
+  <img src="../../../../assets/CHAPÉU SELETOR (6).png" alt="logo" class="logo">
+  <p>Novo Pedido</p>
+  <button (click)="onSelectType('cafés')" class="product-button" >Cafés</button>
+  <button (click)="onSelectType('lanches')" class="product-button" >Lanches</button>
+  <button (click)="onSelectType('almoços')" class="product-button" >Almoços</button>
+  <button (click)="onSelectType('bebidas')" class="product-button" >Bebidas</button>
+</div>
+
+
+<div class="cards-container">
+  <div *ngFor="let product of products">
+    <div class="product-card">
+      <img [src]="product.image" alt="Product Image" class="product-image">
+      <button class="product-btn" (click)="addToCart(product)">{{ product.name }} R$ {{ product.price }}</button>
+    </div>
+  </div>  
+</div>

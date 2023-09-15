@@ -1,17 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginModule } from '../componentes/login/login.module';
-import { HomeModule } from '../componentes/home/home.module';
+import { OptionsModule } from './options/options.module';
+import { MenuModule } from './menu/menu.module';
+import { EditModule } from './edit/edit.module';
+
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import ('../componentes/home/home.module').then( m => HomeModule)
+    path: '',
+    loadChildren: () => import('../componentes/login/login.module').then(m => LoginModule)
+  },
+  {
+    path: 'options',
+    loadChildren: () => import('../componentes/options/options.module').then(m => OptionsModule)
 
   },
   {
-    path: 'logar', 
-    loadChildren: () => import ('../componentes/login/login.module').then( m => LoginModule)
+    path: 'menu',
+    loadChildren: () => import('../componentes/menu/menu.module').then(m => MenuModule)
+  },
+  {
+  path: 'products',
+    loadChildren: () => import('../componentes/edit/edit.module').then(m => EditModule)
   }
 ];
 

@@ -1,0 +1,57 @@
+.containerMenu{
+  position: absolute;
+
+}
+
+.menu{
+  width: 1900px;
+  height:910px;
+}
+
+
+p {
+  color: white;
+  font-family: 'chiller';
+  font-size: 30px;
+  
+}
+
+.type-options{
+
+  top:75px;
+  left: 50%;
+  transform: translate(-50%);
+  align-items: center;
+  display: flex;
+  
+  justify-content: center;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  height: 150px;
+  
+  box-shadow: 3px 4px 10px 15px black;
+  
+}
+
+.product-button{
+
+  font-family: 'chiller';
+  margin: 20px;
+  border-radius: 15%;
+  margin-top: 10px;
+  box-shadow: 3px 4px 10px 8px black;
+  font-size: medium;
+
+  font-family: 'chiller';
+  font-size: 20px;
+  width: 150px;
+  height:30px;
+}
+.product-button:hover{
+    filter: brightness(0.8); 
+}
+
+.logo{
+  width: 150px;
+  height: 150px;
+}
